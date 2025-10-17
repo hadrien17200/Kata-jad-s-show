@@ -1,5 +1,7 @@
 package com.jad.show;
 
+import com.jad.customer.Spectator;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -21,5 +23,11 @@ public class TheaterShow extends Show {
 
     public List<String> getActors() {
         return Collections.unmodifiableList(this.actors);
+    }
+
+
+    @Override
+    public void comeToSeeYou(Spectator spectator) {
+        spectator.watch(this);
     }
 }
